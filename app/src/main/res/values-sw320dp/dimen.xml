@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="vsText">8sp</dimen>
+    <dimen name="sText">10sp</dimen>
+    <dimen name="mText">12sp</dimen>
+    <dimen name="lText">14sp</dimen>
+    <dimen name="xlText">16sp</dimen>
+    <dimen name="xxlText">18sp</dimen>
+    <dimen name="xxxlText">20sp</dimen>
+    <dimen name="xxxxlText">22sp</dimen>
+    <dimen name="maxText">28sp</dimen>
+    <dimen name="maxHalfText">14sp</dimen>
+    <dimen name="tripleMaxText">84sp</dimen>
+    <dimen name="fiveMaxText">140sp</dimen>
+    <dimen name="sevenMaxText">196sp</dimen>
+    <!-- Default screen margins -->
+    <dimen name="vsMargin">2dp</dimen>
+    <dimen name="sMargin">4dp</dimen>
+    <dimen name="mMargin">6dp</dimen>
+    <dimen name="lMargin">10dp</dimen>
+    <dimen name="xlMargin">12dp</dimen>
+    <dimen name="xxlMargin">15dp</dimen>
+    <dimen name="xxxlMargin">18dp</dimen>
+    <dimen name="xxxxlMargin">20dp</dimen>
+    <dimen name="maxMargin">25dp</dimen>
+
+
+    <!-- Default screen margins -->
+    <dimen name="vsImage">16dp</dimen>
+    <dimen name="sImage">24dp</dimen>
+    <dimen name="mImage">36dp</dimen>
+    <dimen name="lImage">48dp</dimen>
+    <dimen name="xlImage">64dp</dimen>
+    <dimen name="xxlImage">72dp</dimen>
+    <dimen name="xxxlImage">96dp</dimen>
+    <dimen name="xxxxlImage">128dp</dimen>
+    <dimen name="maxImage">144dp</dimen>
+
+</resources>

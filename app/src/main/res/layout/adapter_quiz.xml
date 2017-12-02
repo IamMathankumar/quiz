@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/optionCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/colorGreen"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/optionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/colorGreen"
+            android:text="@string/option_a"
+            android:gravity="center_vertical"
+            android:padding="@dimen/sMargin"
+            android:layout_alignTop="@+id/optionValue"
+            android:layout_alignBottom="@+id/optionValue"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/xlText" />
+
+        <TextView
+            android:id="@+id/optionValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/optionTitle"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/lMargin"
+            android:text="Green"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/xlText" />
+
+        <TextView
+            android:id="@+id/optionAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/mMargin"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/xxlText"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/background_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_quiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/mImage"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/lText"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sImage"
+        android:layout_marginEnd="@dimen/lMargin"
+        android:layout_marginStart="@dimen/lMargin"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/circleView"
+        android:layout_width="@dimen/mImage"
+        android:layout_height="@dimen/mImage"
+        app:cpv_autoTextSize="true"
+        app:cpv_barColor="@color/colorPrimary"
+        app:cpv_barWidth="@dimen/mMargin"
+        app:cpv_fillColor="@color/colorWhite"
+        app:cpv_innerContourSize="0dp"
+        app:cpv_outerContourSize="0dp"
+        app:cpv_rimColor="@color/colorPrimaryLight"
+        app:cpv_rimWidth="@dimen/mMargin"
+        app:cpv_textMode="Value"
+        app:cpv_seekMode="true"
+        app:cpv_showUnit="true"
+        app:cpv_spinColor="@color/colorPrimary"
+        app:cpv_textColor="@color/colorPrimaryDark"
+        app:cpv_textScale="1"
+        app:cpv_unit="s"
+        app:cpv_unitColor="@color/colorPrimaryDark"
+        app:cpv_unitPosition="right_top"
+        app:cpv_unitScale="1"
+        app:cpv_value="0"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textQsn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="@dimen/mMargin"
+        android:scrollbars="vertical"
+        android:text="What is the color of red color shirt?"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/maxText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleView"
+        app:layout_constraintBottom_toTopOf="@+id/subParent"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/subParent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQsn">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/optionACard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xlMargin"
+            android:layout_marginStart="@dimen/xlMargin"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/optionBCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/optionTitleA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen"
+                    android:padding="@dimen/xlMargin"
+                    android:text="@string/option_a"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionAnswerA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/optionTitleA"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/xlMargin"
+                    android:text="Green"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionWrongA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/xlMargin"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xxlText" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/optionBCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xlMargin"
+            android:layout_marginStart="@dimen/xlMargin"
+            android:layout_marginTop="@dimen/mMargin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/optionCCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionACard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/optionTitleB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen"
+                    android:padding="@dimen/xlMargin"
+                    android:text="@string/option_b"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionAnswerB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/optionTitleB"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/xlMargin"
+                    android:text="Blue"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionWrongB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/xlMargin"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/optionCCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xlMargin"
+            android:layout_marginStart="@dimen/xlMargin"
+            android:layout_marginTop="@dimen/mMargin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/optionDCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionBCard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/optionTitleC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen"
+                    android:padding="@dimen/xlMargin"
+                    android:text="@string/option_c"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionAnswerC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/optionTitleC"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/xlMargin"
+                    android:text="Pink"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionWrongC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/xlMargin"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/optionDCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xlMargin"
+            android:layout_marginStart="@dimen/xlMargin"
+            android:layout_marginTop="@dimen/mMargin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toTopOf="@+id/dummy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionCCard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/optionTitleD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen"
+                    android:padding="@dimen/xlMargin"
+                    android:text="@string/option_d"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionAnswerD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/optionTitleD"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/xlMargin"
+                    android:text="Red"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/xlText" />
+
+                <TextView
+                    android:id="@+id/optionWrongD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/xlMargin"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/xlText" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:id="@+id/dummy"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="@dimen/xlMargin"
+            android:layout_marginStart="@dimen/xlMargin"
+            android:layout_marginTop="@dimen/mMargin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionDCard" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/qsnCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mMargin"
+        android:text="1/20"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <TextView
+        android:id="@+id/typeOfQsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mMargin"
+        android:text="Type of qsn"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+</android.support.constraint.ConstraintLayout>

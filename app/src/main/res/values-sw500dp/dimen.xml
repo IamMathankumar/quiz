@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen textSizes. -->
+    <dimen name="vsText">12sp</dimen>
+    <dimen name="sText">14sp</dimen>
+    <dimen name="mText">16sp</dimen>
+    <dimen name="lText">18sp</dimen>
+    <dimen name="xlText">20sp</dimen>
+    <dimen name="xxlText">22sp</dimen>
+    <dimen name="xxxlText">24sp</dimen>
+    <dimen name="xxxxlText">26sp</dimen>
+    <dimen name="maxText">32sp</dimen>
+    <dimen name="maxHalfText">16sp</dimen>
+    <dimen name="tripleMaxText">96sp</dimen>
+
+    <dimen name="fiveMaxText">160sp</dimen>
+    <dimen name="sevenMaxText">224sp</dimen>
+
+    <!-- Default screen margins -->
+    <dimen name="vsMargin">4dp</dimen>
+    <dimen name="sMargin">6dp</dimen>
+    <dimen name="mMargin">9dp</dimen>
+    <dimen name="lMargin">12dp</dimen>
+    <dimen name="xlMargin">16dp</dimen>
+    <dimen name="xxlMargin">20dp</dimen>
+    <dimen name="xxxlMargin">22dp</dimen>
+    <dimen name="xxxxlMargin">26dp</dimen>
+    <dimen name="maxMargin">36dp</dimen>
+
+    <!-- Default screen margins -->
+    <dimen name="vsImage">25dp</dimen>
+    <dimen name="sImage">34dp</dimen>
+    <dimen name="mImage">46dp</dimen>
+    <dimen name="lImage">58dp</dimen>
+    <dimen name="xlImage">75dp</dimen>
+    <dimen name="xxlImage">82dp</dimen>
+    <dimen name="xxxlImage">108dp</dimen>
+    <dimen name="xxxxlImage">140dp</dimen>
+    <dimen name="maxImage">160dp</dimen>
+</resources>
